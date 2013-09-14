@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B713C29E-0E52-4B04-B4AD-AF714449A79C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SharpDvdInfo</RootNamespace>
+    <AssemblyName>SharpDvdInfo</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\SharpDvdInfo.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DvdInfoContainer.cs" />
+    <Compile Include="DvdTypes\DvdAudioFormat.cs" />
+    <Compile Include="DvdTypes\DvdAudioId.cs" />
+    <Compile Include="DvdTypes\DvdAudioQuantization.cs" />
+    <Compile Include="DvdTypes\DvdAudioType.cs" />
+    <Compile Include="DvdTypes\DvdLangList.cs" />
+    <Compile Include="DvdTypes\DvdLanguage.cs" />
+    <Compile Include="DvdTypes\DvdSubpictureFormat.cs" />
+    <Compile Include="DvdTypes\DvdSubpictureType.cs" />
+    <Compile Include="DvdTypes\DvdVideoAspectRatio.cs" />
+    <Compile Include="DvdTypes\DvdVideoMpegVersion.cs" />
+    <Compile Include="DvdTypes\DvdVideoPermittedDisplayFormat.cs" />
+    <Compile Include="DvdTypes\DvdVideoResolution.cs" />
+    <Compile Include="DvdTypes\DvdVideoStandard.cs" />
+    <Compile Include="Model\AudioProperties.cs" />
+    <Compile Include="Model\SubpictureProperties.cs" />
+    <Compile Include="Model\TitleInfo.cs" />
+    <Compile Include="Model\VideoProperties.cs" />
+    <Compile Include="Model\VmgmInfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
