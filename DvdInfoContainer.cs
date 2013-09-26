@@ -114,7 +114,8 @@ namespace SharpDvdInfo
                             Channels = GetBits(buffer, 3, 8) + 1,
                             SampleRate = 48000,
                             Quantization = (DvdAudioQuantization) GetBits(buffer, 2, 14),
-                            StreamId = DvdAudioId.ID[codingMode] + audioNum
+                            StreamId = DvdAudioId.ID[codingMode] + audioNum,
+                            StreamIndex = audioNum + 1
                         };
 
                         if (langMode == 1)
@@ -145,7 +146,8 @@ namespace SharpDvdInfo
                         SubpictureProperties sub = new SubpictureProperties
                         {
                             Format = (DvdSubpictureFormat) GetBits(buffer, 3, 5),
-                            StreamId = 0x20 + subNum
+                            StreamId = 0x20 + subNum,
+                            StreamIndex = subNum + 1
                         };
 
                         if (langMode == 1)
@@ -243,6 +245,7 @@ namespace SharpDvdInfo
                     TitleInfo item = new TitleInfo();
                     fs.Read(buffer, 0, 12);
 
+                    item.TitleNumber = (byte) (i + 1);
                     item.TitleType = (byte) GetBits(buffer, 8, 0);
                     item.NumAngles = (byte) GetBits(buffer, 8, 1*8);
                     item.NumChapters = (short) GetBits(buffer, 16, 2*8);

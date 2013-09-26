@@ -38,6 +38,11 @@ namespace SharpDvdInfo.Model
         public short ParentalMask { get; set; }
 
         /// <summary>
+        /// Title Number
+        /// </summary>
+        public byte TitleNumber { get; set; }
+
+        /// <summary>
         /// Number of titleset
         /// </summary>
         public byte TitleSetNumber { get; set; }

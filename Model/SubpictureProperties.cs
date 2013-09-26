@@ -35,5 +35,10 @@ namespace SharpDvdInfo.Model
         /// Stream ID
         /// </summary>
         public int StreamId { get; set; }
+
+        /// <summary>
+        /// Stream Index
+        /// </summary>
+        public int StreamIndex { get; set; }
     }
 }
